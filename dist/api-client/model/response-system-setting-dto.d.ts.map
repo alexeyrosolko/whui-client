@@ -1,1 +1,0 @@
-{"version":3,"file":"response-system-setting-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/response-system-setting-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AACH,OAAO,EAAE,gBAAgB,EAAE,MAAM,sBAAsB,CAAC;AACxD,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAGtC,MAAM,WAAW,wBAAwB;IACrC,QAAQ,CAAC,EAAE,QAAQ,CAAC;IACpB,OAAO,CAAC,EAAE,gBAAgB,CAAC;CAC9B"}

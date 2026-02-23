@@ -1,1 +1,0 @@
-{"version":3,"file":"warehouse-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/warehouse-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAGH,MAAM,WAAW,YAAY;IACzB,IAAI,EAAE,MAAM,CAAC;IACb,IAAI,EAAE,MAAM,CAAC;IACb,MAAM,CAAC,EAAE,MAAM,CAAC;IAChB,KAAK,CAAC,EAAE,MAAM,CAAC;CAClB"}

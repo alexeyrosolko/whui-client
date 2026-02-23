@@ -1,1 +1,0 @@
-{"version":3,"file":"response-order-record-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/response-order-record-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AACH,OAAO,EAAE,cAAc,EAAE,MAAM,oBAAoB,CAAC;AACpD,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAGtC,MAAM,WAAW,sBAAsB;IACnC,QAAQ,CAAC,EAAE,QAAQ,CAAC;IACpB,OAAO,CAAC,EAAE,cAAc,CAAC;CAC5B"}

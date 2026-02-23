@@ -1,1 +1,0 @@
-{"version":3,"file":"response-list-person-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/response-list-person-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AACH,OAAO,EAAE,SAAS,EAAE,MAAM,cAAc,CAAC;AACzC,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAGtC,MAAM,WAAW,qBAAqB;IAClC,QAAQ,CAAC,EAAE,QAAQ,CAAC;IACpB,OAAO,CAAC,EAAE,KAAK,CAAC,SAAS,CAAC,CAAC;CAC9B"}

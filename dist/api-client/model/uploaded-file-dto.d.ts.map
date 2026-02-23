@@ -1,1 +1,0 @@
-{"version":3,"file":"uploaded-file-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/uploaded-file-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAGH,MAAM,WAAW,eAAe;IAC5B,EAAE,CAAC,EAAE,MAAM,CAAC;IACZ,UAAU,CAAC,EAAE,MAAM,CAAC;IACpB,WAAW,EAAE,MAAM,CAAC;IACpB,WAAW,CAAC,EAAE,OAAO,CAAC;IACtB,YAAY,CAAC,EAAE,MAAM,CAAC;IACtB,WAAW,CAAC,EAAE,MAAM,CAAC;CACxB"}

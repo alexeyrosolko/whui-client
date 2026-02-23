@@ -1,1 +1,0 @@
-{"version":3,"file":"account-filter-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/account-filter-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAGH,MAAM,WAAW,gBAAgB;IAC7B,UAAU,CAAC,EAAE,MAAM,CAAC;IACpB,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,SAAS,CAAC,EAAE,MAAM,CAAC;CACtB"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"metadata.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/metadata.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAGH,MAAM,WAAW,QAAQ;IACrB,UAAU,CAAC,EAAE,MAAM,CAAC;IACpB,IAAI,CAAC,EAAE,OAAO,CAAC;IACf,YAAY,CAAC,EAAE,MAAM,CAAC;IACtB,eAAe,CAAC,EAAE,MAAM,CAAC;IACzB,OAAO,CAAC,EAAE,MAAM,CAAC;CACpB"}

@@ -1,52 +1,44 @@
 {
   "name": "whui-client",
-  "version": "0.1.5",
-  "exports": {
-    ".": {
-      "types": "./dist/api-client/index.d.ts",
-      "default": "./dist/api-client/index.js"
-    }
-  },
-  "files": ["dist/api-client"],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "0.0.0",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "prepack": "npm run build",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
 
-    "api:clean:dist": "rimraf dist",
-    "api:clean": "rimraf /src/api-client",
-    "api:gen": "openapi-generator-cli generate -i ./api-docs.yaml -g typescript-angular -o ./src/api-client --skip-validate-spec --additional-properties=providedInRoot=true,fileNaming=kebab-case",
+    "api:clean": "rimraf ./projects/whui-client/src/lib/api-client",
+    "api:gen": "openapi-generator-cli generate -i ./api-docs.yaml -g typescript-angular -o ./projects/whui-client/src/lib/api-client --skip-validate-spec --additional-properties=providedInRoot=true,fileNaming=kebab-case",
     "api:clean:gen": "npm run api:clean && npm run api:gen"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
-    "@ngx-translate/core": "^17.0.0",
-    "@ngx-translate/http-loader": "^17.0.0",
-    "@types/file-saver": "^2.0.7",
-    "file-saver": "^2.0.5",
+    "@angular/animations": "^18.2.0",
+    "@angular/common": "^18.2.0",
+    "@angular/compiler": "^18.2.0",
+    "@angular/core": "^18.2.0",
+    "@angular/forms": "^18.2.0",
+    "@angular/platform-browser": "^18.2.0",
+    "@angular/platform-browser-dynamic": "^18.2.0",
+    "@angular/router": "^18.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "typescript-collections": "^1.3.3",
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@types/file-saver": "^2.0.7",
+    "@angular-devkit/build-angular": "^18.2.21",
+    "@angular/cli": "^18.2.21",
+    "@angular/compiler-cli": "^18.2.0",
     "@types/jasmine": "~5.1.0",
-    "angular-eslint": "21.0.1",
-    "eslint": "^9.39.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "prettier": "^3.8.1",
-    "prettier-eslint": "^16.4.2",
+    "ng-packagr": "^18.2.0",
     "typescript": "~5.5.2",
-    "typescript-eslint": "8.46.4",
     "@openapitools/openapi-generator-cli": "^2.7.0",
     "rimraf": "^6.1.2"
   }

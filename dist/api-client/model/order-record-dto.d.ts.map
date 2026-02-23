@@ -1,1 +1,0 @@
-{"version":3,"file":"order-record-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/order-record-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAGH,MAAM,WAAW,cAAc;IAC3B,aAAa,CAAC,EAAE,MAAM,CAAC;IACvB,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,MAAM,CAAC,EAAE,MAAM,CAAC;IAChB,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,aAAa,CAAC,EAAE,MAAM,CAAC;CAC1B"}

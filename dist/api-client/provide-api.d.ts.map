@@ -1,1 +1,0 @@
-{"version":3,"file":"provide-api.d.ts","sourceRoot":"","sources":["../../src/api-client/provide-api.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,oBAAoB,EAA4B,MAAM,eAAe,CAAC;AAC/E,OAAO,EAAiB,uBAAuB,EAAE,MAAM,iBAAiB,CAAC;AAIzE,wBAAgB,UAAU,CAAC,gBAAgB,EAAE,MAAM,GAAG,uBAAuB,GAAG,oBAAoB,CASnG"}

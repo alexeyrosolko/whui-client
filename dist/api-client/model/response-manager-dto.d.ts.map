@@ -1,1 +1,0 @@
-{"version":3,"file":"response-manager-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/response-manager-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AACH,OAAO,EAAE,UAAU,EAAE,MAAM,eAAe,CAAC;AAC3C,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAGtC,MAAM,WAAW,kBAAkB;IAC/B,QAAQ,CAAC,EAAE,QAAQ,CAAC;IACpB,OAAO,CAAC,EAAE,UAAU,CAAC;CACxB"}

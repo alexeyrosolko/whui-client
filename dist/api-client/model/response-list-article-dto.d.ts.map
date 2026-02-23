@@ -1,1 +1,0 @@
-{"version":3,"file":"response-list-article-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/response-list-article-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AACH,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AACtC,OAAO,EAAE,UAAU,EAAE,MAAM,eAAe,CAAC;AAG3C,MAAM,WAAW,sBAAsB;IACnC,QAAQ,CAAC,EAAE,QAAQ,CAAC;IACpB,OAAO,CAAC,EAAE,KAAK,CAAC,UAAU,CAAC,CAAC;CAC/B"}

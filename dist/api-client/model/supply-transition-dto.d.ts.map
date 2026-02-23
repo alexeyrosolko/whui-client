@@ -1,1 +1,0 @@
-{"version":3,"file":"supply-transition-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/supply-transition-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAGH,MAAM,WAAW,mBAAmB;IAChC,aAAa,EAAE,MAAM,CAAC;IACtB,UAAU,EAAE,MAAM,CAAC;IACnB,SAAS,EAAE,MAAM,CAAC;IAClB,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,SAAS,CAAC,EAAE,MAAM,CAAC;IACnB,aAAa,EAAE,MAAM,CAAC;CACzB"}
