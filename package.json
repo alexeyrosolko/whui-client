@@ -1,6 +1,6 @@
 {
   "name": "whui-client",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
