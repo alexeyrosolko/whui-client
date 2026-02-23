@@ -1,13 +1,13 @@
 {
   "name": "whui-client",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./dist/api-client/index.d.ts",
+      "default": "./dist/api-client/index.js"
     }
   },
-  "files": ["dist"],
+  "files": ["dist/api-client"],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
