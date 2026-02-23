@@ -1,0 +1,1 @@
+{"version":3,"file":"person-dto.js","sourceRoot":"","sources":["../../../src/api-client/model/person-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAiBH,MAAM,KAAW,SAAS,CAOzB;AAPD,WAAiB,SAAS;IACT,kBAAQ,GAAG;QACpB,KAAK,EAAE,OAAO;QACd,OAAO,EAAE,SAAS;QAClB,QAAQ,EAAE,UAAU;KACd,CAAC;AAEf,CAAC,EAPgB,SAAS,KAAT,SAAS,QAOzB"}

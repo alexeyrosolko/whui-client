@@ -1,0 +1,1 @@
+{"version":3,"file":"response-wh-admin-is-present-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/response-wh-admin-is-present-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AACH,OAAO,EAAE,mBAAmB,EAAE,MAAM,2BAA2B,CAAC;AAChE,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAGtC,MAAM,WAAW,2BAA2B;IACxC,QAAQ,CAAC,EAAE,QAAQ,CAAC;IACpB,OAAO,CAAC,EAAE,mBAAmB,CAAC;CACjC"}

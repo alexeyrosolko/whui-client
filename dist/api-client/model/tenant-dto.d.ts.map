@@ -1,0 +1,1 @@
+{"version":3,"file":"tenant-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/tenant-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AAGH;;GAEG;AACH,MAAM,WAAW,SAAS;IACtB,IAAI,EAAE,MAAM,CAAC;IACb,IAAI,EAAE,MAAM,CAAC;IACb,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,KAAK,CAAC,EAAE,MAAM,CAAC;IACf,QAAQ,CAAC,EAAE,MAAM,CAAC;IAClB,QAAQ,CAAC,EAAE,MAAM,CAAC;CACrB"}

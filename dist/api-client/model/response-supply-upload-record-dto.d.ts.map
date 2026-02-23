@@ -1,0 +1,1 @@
+{"version":3,"file":"response-supply-upload-record-dto.d.ts","sourceRoot":"","sources":["../../../src/api-client/model/response-supply-upload-record-dto.ts"],"names":[],"mappings":"AAAA;;;;;;;;GAQG;AACH,OAAO,EAAE,qBAAqB,EAAE,MAAM,4BAA4B,CAAC;AACnE,OAAO,EAAE,QAAQ,EAAE,MAAM,YAAY,CAAC;AAGtC,MAAM,WAAW,6BAA6B;IAC1C,QAAQ,CAAC,EAAE,QAAQ,CAAC;IACpB,OAAO,CAAC,EAAE,qBAAqB,CAAC;CACnC"}
