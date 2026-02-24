@@ -8,9 +8,18 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
 
+    "whui-client:download-api": "curl localhost:8080/api-docs.yaml -o /Users/Aliaksei_Rasolka/wh/whui-client/api-docs.yaml",
+
     "api:clean": "rimraf ./projects/whui-client/src/lib/api-client",
     "api:gen": "openapi-generator-cli generate -i ./api-docs.yaml -g typescript-angular -o ./projects/whui-client/src/lib/api-client --skip-validate-spec --additional-properties=providedInRoot=true,fileNaming=kebab-case",
-    "api:clean:gen": "npm run api:clean && npm run api:gen"
+    "api:clean:gen": "npm run api:clean && npm run api:gen",
+
+    "whui-client:clean": "rimraf ./dist",
+    "wh-open-client:build": "ng build whui-client",
+    "wh-open-client:clean": "rimraf /Users/Aliaksei_Rasolka/wh/wh-open-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md}",
+    "wh-open-client:copy": "cp -r /Users/Aliaksei_Rasolka/wh/whui-client/dist/whui-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md} /Users/Aliaksei_Rasolka/wh/wh-open-client",
+
+    "wh-open-client:generate": "npm run api:clean:gen && npm run wh-open-client:clean && npm run wh-open-client:build  && npm run wh-open-client:copy"
   },
   "private": true,
   "dependencies": {
