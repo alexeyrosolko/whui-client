@@ -664,6 +664,61 @@ paths:
                 $ref: "#/components/schemas/ResponseCommonDto"
       security:
       - bearerAuth: []
+  /api/warehouse/{warehouseCode}/supply/{supplyCode}/uploadrecord/csv/clipboard:
+    post:
+      tags:
+      - supply-upload-record-controller
+      operationId: uploadFileFromClipboard
+      parameters:
+      - name: warehouseCode
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: supplyCode
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+        required: true
+      responses:
+        "403":
+          description: Forbidden
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/ResponseCommonDto"
+        "404":
+          description: Not Found
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/ResponseCommonDto"
+        "401":
+          description: Unauthorized
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/ResponseCommonDto"
+        "400":
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/ResponseCommonDto"
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/ResponseCommonDto"
+      security:
+      - bearerAuth: []
   /api/warehouse/{warehouseCode}/supply/{supplyCode}/uploadrecord/checking:
     post:
       tags:
@@ -1667,8 +1722,10 @@ paths:
   /api/printer:
     get:
       tags:
-      - printer-controller
-      operationId: get
+      - Printers
+      summary: Получить список тенантов
+      description: Возвращает список всех тенантов с пагинацией
+      operationId: getPrinters
       parameters:
       - name: pageable
         in: query
@@ -1708,10 +1765,10 @@ paths:
                 $ref: "#/components/schemas/ResponseListPrinterDto"
     post:
       tags:
-      - Printer
+      - Printers
       summary: Добавить принтер в тенант
       description: Добавить принтер в тенант
-      operationId: addPrinter
+      operationId: createPrinter
       requestBody:
         content:
           application/json:
@@ -2940,8 +2997,10 @@ paths:
   /api/printer/count:
     get:
       tags:
-      - printer-controller
-      operationId: getCount_4
+      - Printers
+      summary: Получить количество принтеров
+      description: Получить количество принтеров
+      operationId: getPrintersCount
       responses:
         "403":
           description: Forbidden
@@ -2973,6 +3032,8 @@ paths:
             '*/*':
               schema:
                 $ref: "#/components/schemas/ResponseCountDto"
+      security:
+      - bearerAuth: []
   /api/admin/whadmin/token/{login}:
     get:
       tags:
