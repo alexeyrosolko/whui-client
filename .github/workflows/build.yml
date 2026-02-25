@@ -23,7 +23,7 @@ jobs:
 
       - name: Build image (no push)
         run: |
-          docker build -t whc:ci -f ./docker/Dockerfile .
+          docker build -t whc:ci -f ./docker/java/Dockerfile .
 
       - name: Run container
         run: |
