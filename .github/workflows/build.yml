@@ -57,13 +57,47 @@ jobs:
           name: api-docs
           path: api-docs.yaml
 
+      - name: Build image (no push)
+        run: |
+          docker build -t openapi:ci -f ./docker/angular/Dockerfile .
+
       - name: Run OpenApi container
         run: |
           docker run -d \
             --mount type=bind,source=$(pwd)/dist,target=/app/dist \
-            --name whui \
-            whui:ci
+            --name openapi \
+            openapi:ci
 
       - name: Check result
         run: |
           ls /dist
+
+#      # 1️⃣ Клонируем другой репозиторий
+#      - name: Checkout target repo
+#        uses: actions/checkout@v4
+#        with:
+#          repository: alexeyrosolko/wh-open-client
+#          path: wh-open-client
+#          # ВАЖНО: нужен токен с доступом к приватному repo
+#          token: ${{ secrets.SECRET_WH_2026_02_21_01 }}
+#
+#      # 2️⃣ Вносим изменения
+#      - name: Modify file
+#        run: |
+#          cd other-repo
+#          echo "Updated at $(date)" >> test.txt
+#
+#      # 3️⃣ Коммитим изменения
+#      - name: Commit changes
+#        run: |
+#          cd other-repo
+#          git config user.name "github-actions"
+#          git config user.email "github-actions@github.com"
+#          git add .
+#          git commit -m "Auto update from CI" || echo "No changes"
+#
+#      # 4️⃣ Пушим обратно
+#      - name: Push changes
+#        run: |
+#          cd other-repo
+#          git push
