@@ -76,22 +76,22 @@ jobs:
 
       - name: Check result
         run: |
-          ls /dist
+          ls $(pwd)/dist
 
-#      # 1️⃣ Клонируем другой репозиторий
-#      - name: Checkout target repo
-#        uses: actions/checkout@v4
-#        with:
-#          repository: alexeyrosolko/wh-open-client
-#          path: wh-open-client
-#          # ВАЖНО: нужен токен с доступом к приватному repo
-#          token: ${{ secrets.SECRET_WH_2026_02_21_01 }}
-#
-#      # 2️⃣ Вносим изменения
-#      - name: Modify file
-#        run: |
-#          cd other-repo
-#          echo "Updated at $(date)" >> test.txt
+      # 1️⃣ Клонируем другой репозиторий
+      - name: Checkout target repo
+        uses: actions/checkout@v4
+        with:
+          repository: alexeyrosolko/wh-open-client
+          path: wh-open-client
+          # ВАЖНО: нужен токен с доступом к приватному repo
+          token: ${{ secrets.SECRET_WH_2026_02_26_01 }}
+
+      # 2️⃣ Вносим изменения
+      - name: Modify file
+        run: |
+          cd wh-open-client
+          ls -la
 #
 #      # 3️⃣ Коммитим изменения
 #      - name: Commit changes
