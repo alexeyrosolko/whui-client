@@ -56,3 +56,14 @@ jobs:
         with:
           name: api-docs
           path: api-docs.yaml
+
+      - name: Run OpenApi container
+        run: |
+          docker run -d \
+            --mount type=bind,source=/dist,target=/app/dist \
+            --name whui \
+            whui:ci
+
+      - name: Check result
+        run: |
+          ls /dist
