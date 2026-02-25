@@ -61,6 +61,12 @@ jobs:
         run: |
           docker build -t openapi:ci -f ./docker/angular/Dockerfile .
 
+      - name: Prepare dist folder
+        run: |
+          echo "current dir"
+          pwd
+          mkdir -p dist
+
       - name: Run OpenApi container
         run: |
           docker run -d \
