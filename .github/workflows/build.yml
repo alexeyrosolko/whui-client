@@ -90,20 +90,29 @@ jobs:
       # 2️⃣ Вносим изменения
       - name: Modify file
         run: |
+          # удалить старое (без ошибок если чего-то нет)
+          rm -rf esm2022 fesm2022 lib .npmignore package.json public-api.d.ts README.md
+
+          # копировать новое из dist (dist рядом с wh-open-client)
+          cp -r ../dist/esm2022 .
+          cp -r ../dist/fesm2022 .
+          cp -r ../dist/lib .
+          cp ../dist/.npmignore .
+          cp ../dist/package.json .
+          cp ../dist/public-api.d.ts .
+          cp ../dist/README.md .
+
+      # 3️⃣ Коммитим изменения
+      - name: Commit changes
+        run: |
           cd wh-open-client
-          ls -la
-#
-#      # 3️⃣ Коммитим изменения
-#      - name: Commit changes
-#        run: |
-#          cd other-repo
-#          git config user.name "github-actions"
-#          git config user.email "github-actions@github.com"
-#          git add .
-#          git commit -m "Auto update from CI" || echo "No changes"
-#
-#      # 4️⃣ Пушим обратно
-#      - name: Push changes
-#        run: |
-#          cd other-repo
-#          git push
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto update from CI" || echo "No changes"
+
+      # 4️⃣ Пушим обратно
+      - name: Push changes
+        run: |
+          cd wh-open-client
+          git push origin HEAD:main
