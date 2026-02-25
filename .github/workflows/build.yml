@@ -60,7 +60,7 @@ jobs:
       - name: Run OpenApi container
         run: |
           docker run -d \
-            --mount type=bind,source=/dist,target=/app/dist \
+            --mount type=bind,source=$(pwd)/dist,target=/app/dist \
             --name whui \
             whui:ci
 
