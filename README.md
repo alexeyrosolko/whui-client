@@ -25,3 +25,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+==
+
+Генерация open-client 
+
+1. Взят основной репозиторий 
+
+2. Выкачан Java проект
+   3. запущена сборка docker-open-api
+   - Запустить с profile api-docs
+   4. запуск  docker-open-api
+   5. Получение api-docs.yaml
+
+4. Выкачан WH-OPEN-CLIENT
+- 
+- Генерация open-api
+   - копирование клиента
+   - push client 
+   
+6. Запустить

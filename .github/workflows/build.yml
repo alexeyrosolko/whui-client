@@ -1,0 +1,58 @@
+name: build
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v4
+
+      - name: Checkout private backend repo
+        uses: actions/checkout@v4
+        with:
+          repository: alexeyrosolko/wh24
+          path: wh
+          # ВАЖНО: нужен токен с доступом к приватному repo
+          token: ${{ secrets.SECRET_WH_2026_02_21_01 }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build image (no push)
+        run: |
+          docker build -t whc:ci -f ./docker/Dockerfile .
+
+      - name: Run container
+        run: |
+          docker run -d \
+            -p 8080:8080 \
+            -e SPRING_PROFILES_ACTIVE=swagger-show,openapi \
+            --name whc \
+            whc:ci
+
+      - name: Wait for application
+        run: |
+          for i in {1..30}; do
+            if curl -f http://localhost:8080/api-docs.yaml; then
+              echo "Application is ready"
+              exit 0
+            fi
+            echo "Waiting..."
+            sleep 5
+          done
+          echo "Application failed to start"
+          docker logs whc
+          exit 1
+
+      - name: Download OpenAPI spec
+        run: |
+          curl -f http://localhost:8080/api-docs.yaml -o api-docs.yaml
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: api-docs
+          path: api-docs.yaml
