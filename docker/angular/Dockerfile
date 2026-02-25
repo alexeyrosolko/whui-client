@@ -10,8 +10,7 @@ WORKDIR /app
 # 👇 Install git (required for git-based npm deps)
 RUN apk add --no-cache git
 
-COPY whui-client/ ./
-COPY api-docs.yaml ./
+COPY ./ ./
 
 RUN npm install
 RUN npm run api:clean:gen
