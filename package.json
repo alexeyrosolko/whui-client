@@ -19,7 +19,7 @@
 
     "whui-client:clean": "rimraf ./dist",
     "whui-client:build": "ng build whui-client",
-    "whui-client:clean:build": "npm run whui-client:clean && npm run wh-client:version && npm run whui-client:build",
+    "whui-client:clean:build": "npm run whui-client:clean && npm run whui-client:build",
     "wh-open-client:clean": "rimraf /Users/Aliaksei_Rasolka/wh/wh-open-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md}",
     "wh-open-client:copy": "cp -r /Users/Aliaksei_Rasolka/wh/whui-client/dist/whui-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md} /Users/Aliaksei_Rasolka/wh/wh-open-client",
 

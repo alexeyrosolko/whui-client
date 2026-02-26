@@ -10,6 +10,24 @@ jobs:
       - name: Checkout main repo
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Increase version
+        run: npm run wh-client:version
+
+      - name: Commit and push changes
+        run: |
+          cd ./projects/whui-client
+          VER=$(node -p "require('./package.json').version")
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto update from CI: v$VER"
+
+
       - name: Checkout private backend repo
         uses: actions/checkout@v4
         with:
