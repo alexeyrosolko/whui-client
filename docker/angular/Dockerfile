@@ -20,4 +20,4 @@ RUN pwd && ls -la
 RUN npm run api:clean:gen && npm run whui-client:clean:build
 
 FROM scratch AS export
-COPY --from=openapi-build /app/dist /dist
+COPY --from=openapi-build /app/dist .
