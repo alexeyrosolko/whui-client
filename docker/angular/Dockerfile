@@ -12,6 +12,8 @@ RUN apk add --no-cache git
 
 COPY ./ ./
 
+RUN pwd
+RUN ls
 RUN npm install
 RUN npm run api:clean:gen
 RUN npm run whui-client:clean:build
