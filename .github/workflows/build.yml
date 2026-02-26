@@ -87,8 +87,8 @@ jobs:
 
       # 2️⃣ Вносим изменения
       - name: Modify file
+        working-directory: wh-open-client
         run: |
-          cd ./wh-open-client
           # удалить старое (без ошибок если чего-то нет)
           rm -rf esm2022 fesm2022 lib .npmignore package.json public-api.d.ts README.md
 
@@ -101,10 +101,20 @@ jobs:
           cp ${{ github.workspace }}/dist/whui-client/public-api.d.ts .
           cp ${{ github.workspace }}/dist/whui-client/README.md .
 
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Bump version
+        working-directory: wh-open-client
+        run: npm version patch --no-git-tag-version
+
       # 3️⃣ Коммитим изменения
       - name: Commit changes
+        working-directory: wh-open-client
         run: |
-          cd wh-open-client
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
