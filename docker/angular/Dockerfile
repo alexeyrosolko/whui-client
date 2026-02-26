@@ -17,14 +17,7 @@ COPY . .
 RUN pwd && ls -la
 
 # build steps
-RUN npm run api:clean:gen
-RUN npm run whui-client:clean:build
-#          cp -r $(pwd)/dist/esm2022 .
-#          cp -r $(pwd)/dist/fesm2022 .
-#          cp -r $(pwd)/dist/lib .
-#          cp $(pwd)/dist/.npmignore .
-#          cp $(pwd)/dist/package.json .
-#          cp $(pwd)/dist/public-api.d.ts .
-#          cp $(pwd)/dist/README.md .
+RUN npm run api:clean:gen && npm run whui-client:clean:build
 
-
+FROM scratch AS export
+COPY --from=build /app/dist /dist

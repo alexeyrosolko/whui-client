@@ -57,27 +57,24 @@ jobs:
           name: api-docs
           path: api-docs.yaml
 
-      - name: Build image (no push)
-        run: |
-          docker buildx build --load -t openapi:ci -f ./docker/angular/Dockerfile .
-
       - name: Prepare dist folder
         run: |
           echo "current dir"
           pwd
           mkdir -p dist
 
-      - name: Run OpenApi container
+      - name: Build image (no push)
         run: |
-          docker run \
-            --mount type=bind,source=$(pwd)/dist,target=/app/dist \
-            --name openapi \
-            openapi:ci
-          docker logs openapi
+          docker buildx build \
+          --output type=local,dest=./dist \
+          -f ./docker/angular/Dockerfile .
 
       - name: Check result
         run: |
-          ls $(pwd)/dist
+          echo "Workspace:"
+          pwd
+          echo "Dist content:"
+          ls -R dist
 
       # 1️⃣ Клонируем другой репозиторий
       - name: Checkout target repo
