@@ -109,13 +109,13 @@ jobs:
 
       - name: Bump version
         run: |
-          cd wh-open-client
+          cd ./wh-open-client
           npm version patch --no-git-tag-version
 
       # 3️⃣ Коммитим изменения
       - name: Commit changes
         run: |
-          cd wh-open-client
+          cd ./wh-open-client
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add .
