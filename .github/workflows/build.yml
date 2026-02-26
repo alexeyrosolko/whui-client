@@ -88,17 +88,18 @@ jobs:
       # 2️⃣ Вносим изменения
       - name: Modify file
         run: |
+          cd ./wh-open-client
           # удалить старое (без ошибок если чего-то нет)
           rm -rf esm2022 fesm2022 lib .npmignore package.json public-api.d.ts README.md
 
           # копировать новое из dist (dist рядом с wh-open-client)
-          cp -r $(pwd)/dist/whui-client/esm2022 .
-          cp -r $(pwd)/dist/whui-client/fesm2022 .
-          cp -r $(pwd)/dist/whui-client/lib .
-          cp $(pwd)/dist/whui-client/.npmignore .
-          cp $(pwd)/dist/whui-client/package.json .
-          cp $(pwd)/dist/whui-client/public-api.d.ts .
-          cp $(pwd)/dist/whui-client/README.md .
+          cp -r $(pwd)/dist/whui-client/esm2022 ./esm2022
+          cp -r $(pwd)/dist/whui-client/fesm2022 ./fesm2022
+          cp -r $(pwd)/dist/whui-client/lib ./lib
+          cp $(pwd)/dist/whui-client/.npmignore ./.npmignore
+          cp $(pwd)/dist/whui-client/package.json ./package.json
+          cp $(pwd)/dist/whui-client/public-api.d.ts ./public-api.d.ts
+          cp $(pwd)/dist/whui-client/README.md ./README.md
 
       # 3️⃣ Коммитим изменения
       - name: Commit changes
