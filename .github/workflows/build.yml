@@ -101,8 +101,6 @@ jobs:
           cp ${{ github.workspace }}/dist/whui-client/public-api.d.ts .
           cp ${{ github.workspace }}/dist/whui-client/README.md .
 
-      - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
