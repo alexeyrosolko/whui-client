@@ -110,7 +110,6 @@ jobs:
       - name: Commit changes
         run: |
           cd ./wh-open-client
-          npm version patch --no-git-tag-version
           VER=$(node -p "require('./package.json').version")
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
