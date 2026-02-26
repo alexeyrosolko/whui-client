@@ -1,6 +1,9 @@
 {
   "name": "whui-client",
   "version": "0.0.0",
+  "workspaces": [
+    "projects/whui-client"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -16,12 +19,14 @@
 
     "whui-client:clean": "rimraf ./dist",
     "whui-client:build": "ng build whui-client",
-    "whui-client:clean:build": "npm run whui-client:clean && npm run whui-client:build",
+    "whui-client:clean:build": "npm run whui-client:clean && npm run wh-client:version && npm run whui-client:build",
     "wh-open-client:clean": "rimraf /Users/Aliaksei_Rasolka/wh/wh-open-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md}",
     "wh-open-client:copy": "cp -r /Users/Aliaksei_Rasolka/wh/whui-client/dist/whui-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md} /Users/Aliaksei_Rasolka/wh/wh-open-client",
 
     "wh:clean": "npm run api:clean && npm run whui-client:clean",
-    "wh-open-client:generate": "npm run api:clean:gen && npm run wh-open-client:clean && npm run wh-open-client:build  && npm run wh-open-client:copy"
+    "wh-open-client:generate": "npm run api:clean:gen && npm run wh-open-client:clean && npm run wh-open-client:build  && npm run wh-open-client:copy",
+
+    "wh-client:version": "npm version patch -w projects/whui-client --no-git-tag-version"
   },
   "private": true,
   "dependencies": {
