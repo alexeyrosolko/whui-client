@@ -59,7 +59,7 @@ jobs:
 
       - name: Build image (no push)
         run: |
-          docker build -t openapi:ci -f ./docker/angular/Dockerfile .
+          docker buildx build --load -t openapi:ci -f ./docker/angular/Dockerfile .
 
       - name: Prepare dist folder
         run: |
@@ -69,10 +69,11 @@ jobs:
 
       - name: Run OpenApi container
         run: |
-          docker run -d \
+          docker run \
             --mount type=bind,source=$(pwd)/dist,target=/app/dist \
             --name openapi \
             openapi:ci
+          docker logs openapi
 
       - name: Check result
         run: |

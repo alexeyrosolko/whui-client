@@ -1,20 +1,22 @@
 FROM --platform=$BUILDPLATFORM node:20-alpine AS frontend-build
 
+# system deps
 RUN apk add --no-cache git openjdk21
-
-# проверить версию (опционально)
-RUN java -version
 
 WORKDIR /app
 
-# 👇 Install git (required for git-based npm deps)
-RUN apk add --no-cache git
+# ---- cache layer ----
+COPY package*.json ./
 
-COPY ./ ./
+RUN npm ci
 
-RUN pwd
-RUN ls
-RUN npm install
+# ---- source code ----
+COPY . .
+
+# optional debug
+RUN pwd && ls -la
+
+# build steps
 RUN npm run api:clean:gen
 RUN npm run whui-client:clean:build
 #          cp -r $(pwd)/dist/esm2022 .
