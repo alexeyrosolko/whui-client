@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM node:20-alpine AS frontend-build
+FROM --platform=$BUILDPLATFORM node:20-alpine AS openapi-build
 
 # system deps
 RUN apk add --no-cache git openjdk21
@@ -20,4 +20,4 @@ RUN pwd && ls -la
 RUN npm run api:clean:gen && npm run whui-client:clean:build
 
 FROM scratch AS export
-COPY --from=build /app/dist /dist
+COPY --from=openapi-build /app/dist /dist
