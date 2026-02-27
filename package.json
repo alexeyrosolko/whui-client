@@ -28,7 +28,7 @@
 
     "wh-client:version": "npm version patch -w projects/whui-client --no-git-tag-version",
 
-    "wh-client:start-pipeline": "echo start > README.md && git commit -am \"start pipeline\" && git push origin main"
+    "wh-client:start-pipeline": "echo start >> README.md && git commit -am \"start pipeline\" && git push origin main"
   },
   "private": true,
   "dependencies": {
