@@ -46,10 +46,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
    
 6. Запустить
 
-
-Try GitOps
-Try Printers Json
-increase version
-increase version
-increase version
-increase version
+Print Payload
