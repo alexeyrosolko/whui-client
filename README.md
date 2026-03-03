@@ -46,6 +46,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 6. Запустить
 
+RUN
+    wh-client:start-pipeline to generate client
+
 Print Payload
 start
 start
