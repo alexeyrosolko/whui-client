@@ -131,8 +131,6 @@ jobs:
       - name: Commit changes
         run: |
           cd ./wh-open-client
-          # 👇 добавить OpenAPI
-          cp ${{ github.workspace }}/api-docs.yaml .
 
           VER=$(node -p "require('./package.json').version")
           git config user.name "github-actions"
