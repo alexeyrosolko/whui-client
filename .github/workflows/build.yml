@@ -118,6 +118,9 @@ jobs:
           cp ${{ github.workspace }}/dist/whui-client/package.json .
           cp ${{ github.workspace }}/dist/whui-client/public-api.d.ts .
           cp ${{ github.workspace }}/dist/whui-client/README.md .
+           # 👇 добавить OpenAPI
+          cp ${{ github.workspace }}/api-docs.yaml .
+
           rm -rf ${{ github.workspace }}/dist
 
       - uses: actions/setup-node@v4
@@ -128,6 +131,9 @@ jobs:
       - name: Commit changes
         run: |
           cd ./wh-open-client
+          # 👇 добавить OpenAPI
+          cp ${{ github.workspace }}/api-docs.yaml .
+
           VER=$(node -p "require('./package.json').version")
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
