@@ -10,54 +10,41 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-
     "whui-client:download-api": "curl localhost:8080/api-docs.yaml -o /Users/Aliaksei_Rasolka/wh/whui-client/api-docs.yaml",
-
     "api:clean": "rimraf ./projects/whui-client/src/lib/api-client",
     "api:gen": "openapi-generator-cli generate -i ./api-docs.yaml -g typescript-angular -o ./projects/whui-client/src/lib/api-client --skip-validate-spec --additional-properties=providedInRoot=true,fileNaming=kebab-case",
     "api:clean:gen": "npm run api:clean && npm run api:gen",
-
     "whui-client:clean": "rimraf ./dist",
     "whui-client:build": "ng build whui-client",
     "whui-client:clean:build": "npm run whui-client:clean && npm run whui-client:build",
     "wh-open-client:clean": "rimraf /Users/Aliaksei_Rasolka/wh/wh-open-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md}",
     "wh-open-client:copy": "cp -r /Users/Aliaksei_Rasolka/wh/whui-client/dist/whui-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md} /Users/Aliaksei_Rasolka/wh/wh-open-client",
-
     "wh:clean": "npm run api:clean && npm run whui-client:clean",
     "wh-open-client:generate": "npm run api:clean:gen && npm run wh-open-client:clean && npm run wh-open-client:build  && npm run wh-open-client:copy",
-
     "wh-client:version": "npm version patch -w projects/whui-client --no-git-tag-version",
-
     "wh-client:start-pipeline": "git fetch --all && git merge --all && echo start >> README.md && git commit -am \"start pipeline\" && git push origin main"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^18.2.0",
-    "@angular/common": "^18.2.0",
-    "@angular/compiler": "^18.2.0",
-    "@angular/core": "^18.2.0",
-    "@angular/forms": "^18.2.0",
-    "@angular/platform-browser": "^18.2.0",
-    "@angular/platform-browser-dynamic": "^18.2.0",
-    "@angular/router": "^18.2.0",
+    "@angular/animations": "^19.2.19",
+    "@angular/common": "^19.2.19",
+    "@angular/compiler": "^19.2.19",
+    "@angular/core": "^19.2.19",
+    "@angular/forms": "^19.2.19",
+    "@angular/platform-browser": "^19.2.19",
+    "@angular/platform-browser-dynamic": "^19.2.19",
+    "@angular/router": "^19.2.19",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.10"
+    "tslib": "^2.8.0",
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.2.21",
-    "@angular/cli": "^18.2.21",
-    "@angular/compiler-cli": "^18.2.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine-core": "~5.2.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "ng-packagr": "^18.2.0",
-    "typescript": "~5.5.2",
-    "@openapitools/openapi-generator-cli": "^2.7.0",
-    "rimraf": "^6.1.2"
+    "@angular-devkit/build-angular": "^19.2.22",
+    "@angular/cli": "^19.2.22",
+    "@angular/compiler-cli": "^19.2.19",
+    "ng-packagr": "^19.2.0",
+    "typescript": "~5.7.2",
+    "@openapitools/openapi-generator-cli": "^2.16.0",
+    "rimraf": "^6.0.0"
   }
 }

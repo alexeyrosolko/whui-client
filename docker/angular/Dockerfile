@@ -8,7 +8,7 @@ WORKDIR /app
 # ---- cache layer ----
 COPY package*.json ./
 
-RUN npm ci
+RUN npm install --legacy-peer-deps
 
 # ---- source code ----
 COPY . .
