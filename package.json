@@ -21,7 +21,7 @@
     "wh-open-client:copy": "cp -r /Users/Aliaksei_Rasolka/wh/whui-client/dist/whui-client/{esm2022,fesm2022,lib,.npmignore,index.d.ts,package.json,public-api.d.ts,README.md} /Users/Aliaksei_Rasolka/wh/wh-open-client",
     "wh:clean": "npm run api:clean && npm run whui-client:clean",
     "wh-open-client:generate": "npm run api:clean:gen && npm run wh-open-client:clean && npm run wh-open-client:build  && npm run wh-open-client:copy",
-    "wh-client:version": "npm version patch -w projects/whui-client --no-git-tag-version",
+    "wh-client:version": "npm version patch -w projects/whui-client --no-git-tag-version --legacy-peer-deps",
     "wh-client:start-pipeline": "git fetch --all && git merge --all && echo start >> README.md && git commit -am \"start pipeline\" && git push origin main"
   },
   "private": true,
