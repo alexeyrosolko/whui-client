@@ -106,22 +106,25 @@ jobs:
       # 2️⃣ Вносим изменения
       - name: Modify file
         run: |
+          # 1. Заходим в целевую репу
           cd ./wh-open-client
-          # удалить старое (без ошибок если чего-то нет)
+          
+          # 2. Удаляем старье
           rm -rf esm2022 fesm2022 lib .npmignore package.json public-api.d.ts README.md
-
-          # копировать новое из dist (dist рядом с wh-open-client)
-          cp -r ${{ github.workspace }}/dist/whui-client/esm2022 .
-          cp -r ${{ github.workspace }}/dist/whui-client/fesm2022 .
-          cp -r ${{ github.workspace }}/dist/whui-client/lib .
-          cp ${{ github.workspace }}/dist/whui-client/.npmignore .
-          cp ${{ github.workspace }}/dist/whui-client/package.json .
-          cp ${{ github.workspace }}/dist/whui-client/public-api.d.ts .
-          cp ${{ github.workspace }}/dist/whui-client/README.md .
-           # 👇 добавить OpenAPI
+          
+          # 3. Копируем всё содержимое из dist (где бы оно ни лежало внутри)
+          # Мы используем точку (.), чтобы найти файлы даже если они сместились
+          if [ -d "${{ github.workspace }}/dist/whui-client" ]; then
+            cp -r ${{ github.workspace }}/dist/whui-client/* .
+          else
+            cp -r ${{ github.workspace }}/dist/* .
+          fi
+          
+          # 4. Копируем спеку, которую скачали ранее
           cp ${{ github.workspace }}/api-docs.yaml .
-
-          rm -rf ${{ github.workspace }}/dist
+          
+          # Для отладки (если снова упадет, увидим что скопировалось)
+          ls -la
 
       - uses: actions/setup-node@v4
         with:
