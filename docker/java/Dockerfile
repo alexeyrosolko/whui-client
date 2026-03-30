@@ -6,7 +6,7 @@ WORKDIR /wh
 COPY wh/ ./
 # гарантированно чистим папку static (если была)
 RUN rm -rf ./ui/src/main/resources/static
-RUN gradle clean bootJar --no-daemon --stacktrace --info
+RUN gradle clean :main:bootJar --no-daemon --stacktrace --info
 
 
 ############################
