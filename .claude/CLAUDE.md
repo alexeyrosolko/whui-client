@@ -87,3 +87,8 @@ npm run api:clean:gen
 ```
 
 The generator config is in `openapitools.json` (generator version 7.20.0, output target: `typescript-angular`).
+
+```NEVER RUN
+NEVER RUN
+npm install
+on this project
