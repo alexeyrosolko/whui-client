@@ -53,75 +53,6 @@ RUN
     wh-client:start-pipeline to generate client
 
 Print Payload
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start
-start  
-start
-start  
-start
-start  
-start  
-start  
-start  
-start
-start
-start
-start
-
 Mon Jun 22 21:36:15 EEST 2026
 
 Mon Jun 22 21:57:16 EEST 2026
@@ -135,3 +66,4 @@ Wed Jun 24 10:24:29 EEST 2026
 Wed Jun 24 11:20:33 EEST 2026
 
 Sun Jun 28 18:40:39 EEST 2026
+start

@@ -2,6 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+run to update library:
+wh-client:start-pipeline
+
 ## What This Project Is
 
 `whui-client` is an Angular workspace that auto-generates and publishes a strongly-typed TypeScript/Angular API client library (`wh-open-client` on npm). The library source is entirely generated from an OpenAPI spec (`api-docs.yaml`) — do not hand-edit files under `projects/whui-client/src/lib/api-client/`.
